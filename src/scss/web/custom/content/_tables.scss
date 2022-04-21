@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+.table {
+    th, td {
+        vertical-align: middle !important;
+    }
+}
+
+.table-furniture {
+    .td-name {
+        width: 25%;
+    }
+    .td-count {
+        width: 15%;
+    }
+    .td-size {
+        width: 10%;
+    }
+    .td-action {
+        width: 10%;
+    }
+    @include media-breakpoint-down(lg) {
+        .td-count {
+            width: 20%;
+        }
+        .td-desc,
+        tbody .td-action {
+            display: none;
+        }
+        .td-action {
+            width: 15%;
+        }
+    }
+    @include media-breakpoint-down(md) {
+        td {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .td-name {
+            width: 45%;
+        }
+        .td-count {
+            width: 35%;
+        }
+        .td-size {
+            display: none;
+        }
+        .td-action {
+            width: 20%;
+        }
+    }
+}
+
+.table-list {
+    th, td {
+        text-align: center;
+    }
+    @include media-breakpoint-down(md) {
+        display: block;
+        thead, tbody, tfoot, th, td, tr {
+            display: block;
+        }
+        thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+        tr {
+//            margin: 0 0 1rem 0;
+            margin-top: -1px;
+        }
+        tbody {
+            tr {
+                padding: 10px;
+                border: 1px solid #dedede;
+            }
+        }
+        td {
+            position: relative;
+            border: none;
+            border-bottom: 1px solid #fff;
+            padding: 5px 10px 5px 40%;
+            text-align: left !important;
+            min-height: 2rem;
+            &:before {
+                position: absolute;
+                left: 10px;
+                width: 35%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: bold;
+            }
+        }
+        tfoot {
+            td {
+            }
+        }
+        &.table-list-evaluate {
+            tbody {
+                td {
+                    &.td-status:before {content: "狀態";}
+                    &.td-number:before {content: "表單編號";}
+                    &.td-date:before {content: "表單日期";}
+                    &.td-car:before {content: "預估車數";}
+                    &.td-talk:before {content: "廠商回應";}
+                    &.td-ctalk:before {content: "客戶回應";}
+                }
+                tr {
+                    td {
+                        &.td-action {
+                        padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

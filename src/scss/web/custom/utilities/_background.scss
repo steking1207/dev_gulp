@@ -1,0 +1,13 @@
+.bg-login {
+    background:url(#{$path-ui}/bg-login.png) 90% center no-repeat $color-ci-light;
+}
+.bg-regist {
+    background:url(#{$path-ui}/bg-regist.png) center center no-repeat $color-ci-light;
+}
+.bg-company {
+    background:url(#{$path-ui}/bg-company.png) center center no-repeat $light;
+}
+
+.bg-gray-2 {
+    background: $gray-200;
+}

@@ -1,0 +1,72 @@
+.modal-dialog {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    @media(max-width: 768px) {
+      min-height: calc(100vh - 20px);
+    }
+}
+.modal-video {
+    .modal-dialog {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .modal-content {
+      height: auto;
+      min-height: 100%;
+      border-radius: 0;
+        iframe {
+            max-width: 90%;
+            height: 100vh;
+        }
+        .modal-header {
+            position: absolute;
+            top: 0;
+            z-index: 100;
+            width: 100%;
+            border: 0;
+            .close {
+                color: $white !important;
+            }
+        }
+        .modal-body {
+            padding: 0;
+            text-align: center;
+            background: $black;
+        }
+    }
+}
+
+.dropdown-toggle:after {
+    position: relative;
+    top: 2px;
+    border: none;
+    font: normal normal normal 15px/1 FontAwesome;
+    content: "\f107";
+}
+
+.btn-warning,
+.btn-outline-warning.active {
+    color: $white;
+    @include hover-focus {
+        color: $white;
+    }
+}
+.btn-outline-warning {
+    @include hover {
+        color: $white;
+    }
+}
+
+.card-columns {
+    column-count: 1;
+    @include media-breakpoint-up(lg) {
+        column-count: 2;
+    }
+}

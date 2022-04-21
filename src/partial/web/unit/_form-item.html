@@ -1,0 +1,28 @@
+<div class="form-group row mb-4">
+    @@if(context.inputName){
+        <label for="@@inputId" class="col-sm-2 col-form-label">@@inputName</label>
+    }
+    <div class="col-sm-10">
+        @@if(context.inputType!='date' && inputType!='select' && inputType!='textarea'){
+            <input type="@@inputType" class="form-control" id="@@inputId" @@if(context.inputValue){value="@@inputValue"} placeholder="@@inputPlaceholder" @@if(context.inputRequired===true){required}>
+        }
+        @@if(context.inputType=='date'){
+            <div class="input-group date" data-provide="datepicker">
+                <input type="text" class="form-control border-right-0" placeholder="@@inputPlaceholder">
+                <div class="input-group-append">
+                    <span class="input-group-text border-left-0 bg-white">
+                        <i class="fas fa-calendar-alt"></i>
+                    </span>
+                </div>
+            </div>
+        }
+        @@if(context.inputType=='select'){
+            <select class="custom-select">
+                <option>@@inputPlaceholder</option>
+            </select>
+        }
+        @@if(context.inputType=='textarea'){
+            <textarea class="form-control" id="@@inputId" rows="@@textareaRows" placeholder="@@inputPlaceholder"></textarea>
+        }
+    </div>
+</div>

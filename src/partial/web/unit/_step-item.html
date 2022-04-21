@@ -1,0 +1,18 @@
+<div class="col-auto">
+    <div class="step-circle @@if(context.stepStatus=='done'){done} @@if(context.stepStatus=='active'){active}">
+        <span class="step-label">
+            @@if(context.stepStatus=='done'){
+                <i class="fas fa-sm fa-check"></i>
+            }
+            @@if(context.stepStatus=='active' || stepStatus==''){
+                @@stepNo
+            }
+        </span>
+        <div class="step-text">@@stepLabel</div>
+    </div>
+</div>
+@@if(context.stepFinish!==true){
+<div class="col">
+    <span class="step-bar"></span>
+</div>
+}

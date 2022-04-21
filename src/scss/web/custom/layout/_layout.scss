@@ -1,0 +1,100 @@
+.section-benefits {
+    .th-lv {
+        padding: 15px 15px 10px;
+    }
+    .td-lv {
+        padding: 10px 15px;
+        font-size: 0.93rem;
+        border-top: 2px solid $white;
+    }
+    .media {
+        margin-top: 15px;
+        &:first-child,
+        &:only-child {
+            margin-top: 0;
+        }
+        .rounded-circle {
+            background-color: $white;
+        }
+    }
+    [class*='col-'] {
+        background-color: $gray-100;
+        border-left: 2px solid $white;
+        &:first-child,
+        &:only-child {
+            border-left: none;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        [class*='col-'] {
+            border-left: none !important;
+        }
+    }
+}
+.bg-light {
+    .section-benefits {
+        .td-lv {
+            border-top-color: $gray-100;
+        }
+        .media {
+            .rounded-circle {
+                background-color: $gray-100;
+            }
+        }
+        [class*='col-'] {
+            background-color: $white;
+            border-left-color: $gray-100;
+        }
+    }
+}
+
+.col-product {
+    border-left: 5px solid $gray-100;
+    border-right: 5px solid $gray-100;
+    @include media-breakpoint-down(lg) {
+        &:nth-child(odd) {
+            border-left: none;
+        }
+        &:nth-child(even) {
+            border-right: none;
+        }
+    }
+    .lead {
+        padding: 20px 0;
+        line-height: 1.5;
+//        text-overflow:ellipsis;
+//        overflow: hidden;
+//        display: -webkit-box;
+//        -webkit-box-orient: vertical;
+//        -webkit-line-clamp: 1;
+    }
+    .row {
+        margin-top: 3px;
+        &.no-gutters {
+            .col-6 {
+                padding: 5px;
+                background-color: $white;
+                border-left: 1px solid $gray-100;
+                text-align: center;
+                font-size: 0.93rem;
+                &:first-child {
+                    border-left: none;
+                }
+            }
+        }
+    }
+}
+
+.col-recommend {
+    border-left: 5px solid $gray-100;
+    border-right: 5px solid $gray-100;
+    .row {
+        background-color: $white;
+    }
+    @include media-breakpoint-down(lg) {
+        border: none;
+        .h4 {
+            font-size: $font-sm;
+        }
+    }
+}
