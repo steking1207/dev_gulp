@@ -1,5 +1,5 @@
 {
-  "name": "gulp-project",
+  "name": "Gulp-Project",
   "version": "1.0.0",
   "description": "Gulp Project",
   "main": "gulpfile.js",
@@ -37,6 +37,5 @@
     "gulp-gh-pages": "^0.5.4",
     "npm": "^7.19.0",
     "swiper": "^8.0.7"
-  },
-  "keywords": []
+  }
 }
