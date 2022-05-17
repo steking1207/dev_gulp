@@ -20,46 +20,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 col-lg-3 my-2">
-                        <a class="btn btn-block btn-lg btn-outline-primary rounded py-3" href="#">
-                            <div class="mb-1">
-                                <i class="fa-fw fa-2x fas fa-shipping-fast"></i>
-                            </div>
-                            <div class="btn btn-block text-white bg-primary border-0 rounded-pill">
-                                快速詢價
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-lg-3 my-2">
-                        <a class="btn btn-block btn-lg btn-outline-primary rounded py-3" href="#">
-                            <div class="mb-1">
-                                <i class="fa-fw fa-2x fas fa-calculator"></i>
-                            </div>
-                            <div class="btn btn-block text-white bg-primary border-0 rounded-pill">
-                                精準詢價
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-lg-3 my-2">
-                        <a class="btn btn-block btn-lg btn-outline-primary rounded py-3" href="#">
-                            <div class="mb-1">
-                                <i class="fa-fw fa-2x fas fa-truck-loading"></i>
-                            </div>
-                            <div class="btn btn-block text-white bg-primary border-0 rounded-pill">
-                                回頭車詢價
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-12 col-lg-3 my-2">
-                        <a class="btn btn-block btn-lg btn-outline-primary rounded py-3" href="#">
-                            <div class="mb-1">
-                                <i class="fa-fw fa-2x fas fa-mobile-alt"></i>
-                            </div>
-                            <div class="btn btn-block text-white bg-primary border-0 rounded-pill">
-                                下載APP填單
-                            </div>
-                        </a>
-                    </div>
+                    @@loop('../unit/_modal-help-item.html', [
+                        {btnStyle:'dark', btnIcon:'fas fa-shipping-fast', btnLabel:'快速詢價'},
+                        {btnStyle:'dark', btnIcon:'fas fa-calculator', btnLabel:'精準詢價'},
+                        {btnStyle:'dark', btnIcon:'fas fa-truck-loading', btnLabel:'回頭車詢價'},
+                        {btnStyle:'dark', btnIcon:'fas fa-mobile-alt', btnLabel:'下載APP填單'},
+                    ])
                 </div>
             </div>
         </div>

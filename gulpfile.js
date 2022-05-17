@@ -16,6 +16,7 @@ const ghPages = require('gulp-gh-pages');
 
 const merge = require('merge-stream');
 const CONFIGS = [
+  require('./gulp.config.app'),
   require('./gulp.config.web')
 ];
 
@@ -48,7 +49,6 @@ const paths = {
 
 
 function clean(cb) {
-
   cb();
 }
 

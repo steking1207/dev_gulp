@@ -1,0 +1,5 @@
+<div class="row" id="@@id">
+    @@for (var i = 0; i < group.item.length; i++) {
+        @@include('../unit/_company-list-item.html', `+(JSON.stringify(group.item[i]))+`)
+    }
+</div>

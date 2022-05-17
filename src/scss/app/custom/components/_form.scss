@@ -1,0 +1,18 @@
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}  
+}
+
+//@include placeholder {
+//    color: #fff;
+//}
+.custom-select {
+    -moz-appearance: window;
+    -webkit-appearance: none;
+}
+.is-invalid {
+    background: #fff0f0 !important;
+    border-color: #efe3e5 !important;
+}

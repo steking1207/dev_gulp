@@ -1,0 +1,35 @@
+html, body {
+    height: 100%;
+}
+html {
+    background: $dark;
+}
+body {
+    overflow-x: hidden;
+//    max-width: 640px;
+    background: $white;
+}
+.container {
+    max-width: 100% !important;
+}
+#main {
+    background: $white;
+}
+a {
+    @include transition(all 0.2s ease);
+    img {
+//        -webkit-backface-visibility: hidden;
+//        @include transition(all 0.2s ease);
+//        &:hover {
+//            @include opacity(.8);
+//        }
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
