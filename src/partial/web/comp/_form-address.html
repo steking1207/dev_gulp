@@ -1,0 +1,70 @@
+<div class="py-3">
+    @@include('../../common/unit/_section-title.html',{
+        title:'@@title',
+    })
+    <div class="form-group row mb-4">
+        <label for="inputInAddress" class="col-sm-2 col-form-label">@@label1</label>
+        <div class="col-sm-10">
+            <div class="form-row">
+                <div class="col">
+                    <select class="custom-select mb-2 mb-lg-0">
+                        <option selected>縣市</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <select class="custom-select mb-2 mb-lg-0">
+                        <option selected>區域</option>
+                    </select>
+                </div>
+                <div class="col-12 col-lg-6 mb-2 mb-lg-0">
+                    <input type="text" class="form-control" id="inputInAddress" value="" placeholder="請輸入詳細地址" required>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-group row mb-4">
+        <label for="inputInTerrain" class="col-sm-2 col-form-label">@@label2</label>
+        <div class="col-sm-4">
+            <select class="custom-select mb-2 mb-lg-0">
+                <option selected>公寓</option>
+            </select>
+        </div>
+        <label for="inputInFloor" class="col-sm-2 col-form-label text-lg-right">樓層</label>
+        <div class="col-sm-4">
+            <div class="form-row">
+                <div class="col-10 col-lg-4">
+                    <input type="text" class="form-control" id="inputInFloor" value="" placeholder="">
+                </div>
+                <div class="col">
+                    <div class="form-control-plaintext">樓</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@if(context.label3){
+    <div class="form-group row mb-4">
+        <label for="inputInDistance" class="col-sm-2 col-form-label">@@label3</label>
+        <div class="col-sm-10">
+            <div class="form-row">
+                <div class="col-10 col-lg-3">
+                    <input type="text" class="form-control" id="inputInDistance" value="" placeholder="">
+                </div>
+                <div class="col">
+                    <div class="form-control-plaintext">公尺</div>
+                </div>
+            </div>
+            <small class="form-text text-muted">
+                物品自1樓移到貨車的距離/中庭距離
+            </small>
+        </div>
+    </div>
+    }
+    @@if(context.label4){
+    <div class="form-group row mb-4">
+        <label for="inputInNote" class="col-sm-2 col-form-label">@@label4</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputInNote" value="" placeholder="例如山坡地等">
+        </div>
+    </div>
+    }
+</div>

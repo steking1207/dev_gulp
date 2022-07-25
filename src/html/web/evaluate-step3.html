@@ -26,16 +26,21 @@
                     <form>
                     <div class="box mb-6">
                         <div class="alert alert-warning m-0">
+                            <ul class="pl-4">
+                                <li class="my-1">個人資訊僅供搬家公司報價聯絡使用</li>
+                                <li class="my-1">填單完成，登入會員即可得與搬家公司雙向溝通討論</li>
+                                <li class="my-1">線上填寫搬家估價單，享5%折扣退費</li>
+                            </ul>
+                            <div class="h5">退費方式</div>
                             <ol class="pl-4 m-0">
-                                <li class="mb-1">個人資訊僅供搬家公司報價聯絡使用。</li>
-                                <li class="mb-1">此系統僅限搬運日前一個月~前一週可使用。</li>
-                                <li class="mb-1">搬運日未符合系統規定，直接電洽搬家公司並明確告知透過崔媽媽基金會得知即可。</li>
-                                <li>填單完成，搬家公司會儘快與您作訊息/電話報價。</li>
+                                <li class="my-1">透過崔媽媽基金會平台，找到合法立案搬家公司，搬家日主動索取填寫紙本崔媽媽搬家滿意度表或自行上網填寫滿意度表。</li>
+                                <li class="my-1">5%折扣退費，申請日:搬運完成月，次次月即可申請(1月1~1月31日搬運，3月1日起即可申請搬運退費。</li>
+                                <li class="my-1">退費方式:加入line客服@jpg1566h, 傳送相關訊息，崔媽媽基金會採用匯款方式提供退費。</li>
                             </ol>
                         </div>
                         <div class="row align-items-center justify-content-center px-6 py-2 py-lg-7">
                             <div class="col-12 col-lg-8">
-                                @@include('../../partial/web/comp/_form.html',{
+                                @@include('../../partial/web/comp/_form-basic.html',{
                                     title:'個人資訊',
                                     group: {
                                         item: [
@@ -47,141 +52,19 @@
                                         ],
                                     },
                                 })
-                                <div class="py-3">
-                                    <div class="mb-4">
-                                        <div class="h5 text-primary-dark font-weight-bold">遷出資訊</div>
-                                    </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputOutAddress" class="col-sm-2 col-form-label">地址</label>
-                                        <div class="col-sm-10">
-                                            <div class="form-row">
-                                                <div class="col">
-                                                    <select class="custom-select mb-2 mb-lg-0">
-                                                        <option selected>縣市</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col">
-                                                    <select class="custom-select mb-2 mb-lg-0">
-                                                        <option selected>區域</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-12 col-lg-6 mb-2 mb-lg-0">
-                                                    <input type="text" class="form-control" id="inputOutAddress" value="" placeholder="請輸入詳細地址" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputOutTerrain" class="col-sm-2 col-form-label">遷出地形</label>
-                                        <div class="col-sm-4">
-                                            <select class="custom-select mb-2 mb-lg-0">
-                                                <option selected>公寓</option>
-                                            </select>
-                                        </div>
-                                        <label for="inputOutFloor" class="col-sm-2 col-form-label text-lg-right">樓層</label>
-                                        <div class="col-sm-4">
-                                            <div class="form-row">
-                                                <div class="col-10 col-lg-4">
-                                                    <input type="text" class="form-control" id="inputOutFloor" value="" placeholder="">
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-control-plaintext">樓</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputOutDistance" class="col-sm-2 col-form-label">步行距離</label>
-                                        <div class="col-sm-10">
-                                            <div class="form-row">
-                                                <div class="col-10 col-lg-3">
-                                                    <input type="text" class="form-control" id="inputOutDistance" value="" placeholder="">
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-control-plaintext">公尺</div>
-                                                </div>
-                                            </div>
-                                            <small class="form-text text-muted">
-                                                物品自1樓移到貨車的距離/中庭距離
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputOutNote" class="col-sm-2 col-form-label">特殊地形備註</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputOutNote" value="" placeholder="例如山坡地等">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="py-3">
-                                    <div class="mb-4">
-                                        <div class="h5 text-primary-dark font-weight-bold">遷入資訊</div>
-                                    </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputInAddress" class="col-sm-2 col-form-label">地址</label>
-                                        <div class="col-sm-10">
-                                            <div class="form-row">
-                                                <div class="col">
-                                                    <select class="custom-select mb-2 mb-lg-0">
-                                                        <option selected>縣市</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col">
-                                                    <select class="custom-select mb-2 mb-lg-0">
-                                                        <option selected>區域</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-12 col-lg-6 mb-2 mb-lg-0">
-                                                    <input type="text" class="form-control" id="inputInAddress" value="" placeholder="請輸入詳細地址" required>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputInTerrain" class="col-sm-2 col-form-label">遷入地形</label>
-                                        <div class="col-sm-4">
-                                            <select class="custom-select mb-2 mb-lg-0">
-                                                <option selected>公寓</option>
-                                            </select>
-                                        </div>
-                                        <label for="inputInFloor" class="col-sm-2 col-form-label text-lg-right">樓層</label>
-                                        <div class="col-sm-4">
-                                            <div class="form-row">
-                                                <div class="col-10 col-lg-4">
-                                                    <input type="text" class="form-control" id="inputInFloor" value="" placeholder="">
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-control-plaintext">樓</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputInDistance" class="col-sm-2 col-form-label">步行距離</label>
-                                        <div class="col-sm-10">
-                                            <div class="form-row">
-                                                <div class="col-10 col-lg-3">
-                                                    <input type="text" class="form-control" id="inputInDistance" value="" placeholder="">
-                                                </div>
-                                                <div class="col">
-                                                    <div class="form-control-plaintext">公尺</div>
-                                                </div>
-                                            </div>
-                                            <small class="form-text text-muted">
-                                                物品自1樓移到貨車的距離/中庭距離
-                                            </small>
-                                        </div>
-                                    </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputInNote" class="col-sm-2 col-form-label">特殊地形備註</label>
-                                        <div class="col-sm-10">
-                                            <input type="text" class="form-control" id="inputInNote" value="" placeholder="例如山坡地等">
-                                        </div>
-                                    </div>
-                                </div>
-
-                                @@include('../../partial/web/comp/_form.html',{
+                                @@include('../../partial/web/comp/_form-address.html',{
+                                    title:'遷出資訊',
+                                    label1:'地址',
+                                    label2:'遷出地形',
+                                })
+                                @@include('../../partial/web/comp/_form-address.html',{
+                                    title:'遷入資訊',
+                                    label1:'地址',
+                                    label2:'遷入地形',
+                                    label3:'步行距離',
+                                    label4:'特殊地形備註',
+                                })
+                                @@include('../../partial/web/comp/_form-basic.html',{
                                     title:'輸入搬運物品',
                                     group: {
                                         item: [
@@ -228,75 +111,30 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form-group row mb-4">
-                                        <label for="inputUpload" class="col-sm-12 col-form-label">上傳照片</label>
-                                        <div class="col-sm-12">
-                                            <div class="alert alert-secondary text-center py-3">
-                                                <div class="mb-2">
-                                                    <i class="fa-5x fa-fw fas fa-file-upload"></i>
-                                                </div>
-                                                <div class="mb-2">
-                                                    <div>選擇或直接拖曳檔案到此上傳</div>
-                                                    <div class="text-secondary"><small>最大可上傳 ?MB 檔案，檔案格式僅限xxx</small></div>
-                                                </div>
-                                                <span class="btn btn-secondary">請選擇檔案</span>
-                                                <input class="file-input" type="file" multiple>
-                                            </div>
-                                            <div class="form-row form-upload-img">
-                                                <div class="col-4 col-lg-2 mb-2 text-center">
-                                                    <div class="pos-r-t mr-1">
-                                                        <a class="btn btn-sm btn-link" href="#">
-                                                            <i class="fas fa-times text-dark"></i>
-                                                        </a>
-                                                    </div>
-                                                    <img class="img-fluid" src="assets/img/uploads/news-lg-01.jpg" alt="">
-                                                </div>
-                                                <div class="col-4 col-lg-2 mb-2 text-center">
-                                                    <div class="pos-r-t mr-1">
-                                                        <a class="btn btn-sm btn-link" href="#">
-                                                            <i class="fas fa-times text-dark"></i>
-                                                        </a>
-                                                    </div>
-                                                    <img class="img-fluid" src="assets/img/uploads/news-lg-02.jpg" alt="">
-                                                </div>
-                                                <div class="col-4 col-lg-2 mb-2 text-center">
-                                                    <div class="pos-r-t mr-1">
-                                                        <a class="btn btn-sm btn-link" href="#">
-                                                            <i class="fas fa-times text-dark"></i>
-                                                        </a>
-                                                    </div>
-                                                    <img class="img-fluid" src="assets/img/uploads/file-upload-01.jpg" alt="">
-                                                </div>
-                                                 <div class="col-4 col-lg-2 mb-2 text-center">
-                                                     <div class="pos-r-t mr-1">
-                                                        <a class="btn btn-sm btn-link" href="#">
-                                                            <i class="fas fa-times text-dark"></i>
-                                                        </a>
-                                                    </div>
-                                                    <img class="img-fluid" src="assets/img/uploads/news-lg-01.jpg" alt="">
-                                                </div>
-                                                <div class="col-4 col-lg-2 mb-2 text-center">
-                                                    <div class="pos-r-t mr-1">
-                                                        <a class="btn btn-sm btn-link" href="#">
-                                                            <i class="fas fa-times text-dark"></i>
-                                                        </a>
-                                                    </div>
-                                                    <img class="img-fluid" src="assets/img/uploads/news-lg-02.jpg" alt="">
-                                                </div>
-                                                <div class="col-4 col-lg-2 mb-2 text-center">
-                                                    <div class="pos-r-t mr-1">
-                                                        <a class="btn btn-sm btn-link" href="#">
-                                                            <i class="fas fa-times text-dark"></i>
-                                                        </a>
-                                                    </div>
-                                                    <img class="img-fluid" src="assets/img/uploads/file-upload-01.jpg" alt="">
-                                                </div>
-                                                <div class="col-4 col-lg-2 mb-2 text-center">
-                                                    <label class="btn btn-upload btn-outline-secondary">
-                                                        <i class="fas fa-2x fa-plus"></i> <input type="file" multiple="multiple" name="FileUpload1" id="FileUpload1" accept="image/*" onchange="showpreview(this);" hidden />
-                                                    </label>
-                                                </div>
-                                            </div>
+                                    @@include('../../partial/web/comp/_form-upload.html',{
+                                        label:'上傳照片',
+                                        group: {
+                                            item: [
+                                                {img:'assets/img/uploads/news-lg-01.jpg'},
+                                                {img:'assets/img/uploads/news-lg-02.jpg'},
+                                                {img:'assets/img/uploads/file-upload-01.jpg'},
+                                                {img:'https://via.placeholder.com/100x300/f90/fff'},
+                                                {img:'https://via.placeholder.com/50x70/90f/fff'},
+                                                {img:'https://via.placeholder.com/300x100/09f/fff'},
+                                            ],
+                                        },
+                                    })
+                                    <div class="py-3">
+                                        @@include('../../partial/web/unit/_form-title.html',{
+                                            title:'媒合搬家公司方式',
+                                        })
+                                        <div class="btn-group">
+                                            <a class="btn btn-light mr-2 p-0" href="#">
+                                                <img class="" src="assets/img/ui/btn-select1.png" alt="崔媽媽基金會為您媒合搬家公司">
+                                            </a>
+                                            <a class="btn btn-light p-0" href="#">
+                                                <img class="" src="assets/img/ui/btn-select2.png" alt="自選1~2間搬家公司">
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -305,78 +143,23 @@
                     </div>
 
                     <div class="box p-4">
-                        <div class="mb-4 text-center">
-                            <div class="h5 text-primary-dark font-weight-bold">
-                                選擇搬家公司 (最多3家)
-                            </div>
-                        </div>
-                        <div class="row" id="company">
-                            <div class="col-12 col-lg-4 my-2 box-select">
-                                <input class="chk" type="checkbox" id="checkbox-send1" name="chk-group1">
-                                <label for="checkbox-send1">
-                                    <i class="fas fa-lg fa-check text-warning"></i>
-                                    <div class="row no-gutters align-items-center post border p-2">
-                                        <div class="col-5 text-center">
-                                            <img class="img-fluid img-logo" src="assets/img/uploads/company-sm-01.jpg" alt="">
-                                        </div>
-                                        <div class="col-7 p-2">
-                                            <span class="badge badge-light mb-1">台北</span>
-                                            <span class="badge badge-danger">審核中</span>
-                                            <div class="h6 text-row-1 text-dark">誠品搬家公司</div>
-                                            <div class="font-sm text-row-1 text-muted">02-24302545</div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="col-12 col-lg-4 my-2 box-select">
-                                <input class="chk" type="checkbox" id="checkbox-send2" name="chk-group2">
-                                <label for="checkbox-send2">
-                                    <i class="fas fa-lg fa-check text-warning"></i>
-                                    <div class="row no-gutters align-items-center post border p-2">
-                                        <div class="col-5 text-center">
-                                            <img class="img-fluid img-logo" src="assets/img/uploads/company-sm-02.jpg" alt="">
-                                        </div>
-                                        <div class="col-7 p-2">
-                                            <span class="badge badge-light mb-1">台北</span>
-                                            <div class="h6 text-row-1 text-dark">誠品搬家公司</div>
-                                            <div class="font-sm text-row-1 text-muted">02-24302545</div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="col-12 col-lg-4 my-2 box-select">
-                                <input class="chk" type="checkbox" id="checkbox-send3" name="chk-group3">
-                                <label for="checkbox-send3">
-                                    <i class="fas fa-lg fa-check text-warning"></i>
-                                    <div class="row no-gutters align-items-center post border p-2">
-                                        <div class="col-5 text-center">
-                                            <img class="img-fluid img-logo" src="assets/img/uploads/company-sm-03.jpg" alt="">
-                                        </div>
-                                        <div class="col-7 p-2">
-                                            <span class="badge badge-light mb-1">台北</span>
-                                            <div class="h6 text-row-1 text-dark">誠品搬家公司</div>
-                                            <div class="font-sm text-row-1 text-muted">02-24302545</div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                            <div class="col-12 col-lg-4 my-2 box-select">
-                                <input class="chk" type="checkbox" id="checkbox-send4" name="chk-group4">
-                                <label for="checkbox-send4">
-                                    <i class="fas fa-lg fa-check text-warning"></i>
-                                    <div class="row no-gutters align-items-center post border p-2">
-                                        <div class="col-5 text-center">
-                                            <img class="img-fluid img-logo" src="assets/img/uploads/company-sm-03.jpg" alt="">
-                                        </div>
-                                        <div class="col-7 p-2">
-                                            <span class="badge badge-light mb-1">台北</span>
-                                            <div class="h6 text-row-1 text-dark">誠品搬家公司</div>
-                                            <div class="font-sm text-row-1 text-muted">02-24302545</div>
-                                        </div>
-                                    </div>
-                                </label>
-                            </div>
-                        </div>
+                        @@include('../../partial/web/unit/_form-title.html',{
+                            title:'選擇搬家公司 (最多3家)',
+                            align:'center',
+                        })
+                        @@include('../../partial/common/comp/_company-select.html',{
+                            title:'選擇搬家公司 (最多3家)',
+                            align:'center',
+                            id:'company',
+                            group: {
+                                item: [
+                                    {col:'-12', colLg:'-4', id:'1', state:'審核中', imgUrl:'assets/img/uploads/company-sm-01.jpg', location:'台北', name:'誠品搬家公司', tel:'02-24302545',},
+                                    {col:'-12', colLg:'-4', id:'2', state:'審核中', imgUrl:'assets/img/uploads/company-sm-02.jpg', location:'台北', name:'誠品搬家公司', tel:'02-24302545',},
+                                    {col:'-12', colLg:'-4', id:'3', imgUrl:'assets/img/uploads/company-sm-03.jpg', location:'桃園', name:'誠品搬家公司', tel:'02-24302545',},
+                                    {col:'-12', colLg:'-4', id:'4', imgUrl:'assets/img/uploads/company-sm-01.jpg', location:'新竹', name:'誠誠搬家公司', tel:'02-24302545',},
+                                ]
+                            },
+                        })
                     </div>
 
                     <div class="row no-gutters justify-content-center mt-6">

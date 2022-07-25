@@ -1,4 +1,4 @@
-<div class="col-6 my-2 box-select">
+<div class="col@@col @@if(context.colLg){col-lg@@colLg} my-2 box-select">
     <input class="chk" type="checkbox" id="checkbox-send@@id" name="chk-group@@id">
     <label for="checkbox-send@@id">
         <img class="img-fluid icon icon-lg fas" src="assets/img/ui/icon-check.svg" alt="@@name">
@@ -8,6 +8,9 @@
             </div>
             <div class="col-7 p-2">
                 <span class="badge badge-light mb-1">@@location</span>
+                @@if(context.state){
+                <span class="badge badge-danger">@@state</span>
+                }
                 <div class="h6 text-row-1 text-dark">@@name</div>
                 <div class="font-sm text-row-1 text-muted">@@tel</div>
             </div>

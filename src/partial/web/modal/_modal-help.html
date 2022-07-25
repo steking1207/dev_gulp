@@ -1,5 +1,5 @@
 <div class="modal fade @@modalClass" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <div class="modal-title">
@@ -11,20 +11,19 @@
             </div>
             <div class="modal-body">
                 <div class="row align-items-center mb-2">
-                    <div class="col-12 col-lg-3 mb-2 mb-lg-0 text-center">
-                        <img class="img-fluid" src="assets/img/ui/modal-help-img.png" alt="">
-                    </div>
-                    <div class="col-12 col-lg h5">
-                        <p>行政院消保團體【財團法人崔媽媽基金會】，處理搬家糾紛。</p>
-                        <p>主動告知搬家公司【透過崔媽媽】得知搬家公司，享有填搬家問卷，搬運費5%折扣退費。</p>
+                    <div class="col-12 h5">
+                        <p>使用媒合單【3大好處】</p>
+                        <ol class="pl-5">
+                            <li>填問卷享5%折扣。</li>
+                            <li>崔媽媽全程陪伴(詢價、糾紛協助)。</li>
+                            <li>線上填寫估價單，搬運完成填寫【搬家滿意度表】享5%退費 ，最高上限1000元。</li>
+                        </ol>
                     </div>
                 </div>
                 <div class="row">
                     @@loop('../unit/_modal-help-item.html', [
-                        {btnStyle:'dark', btnIcon:'fas fa-shipping-fast', btnLabel:'快速詢價'},
-                        {btnStyle:'dark', btnIcon:'fas fa-calculator', btnLabel:'精準詢價'},
-                        {btnStyle:'dark', btnIcon:'fas fa-truck-loading', btnLabel:'回頭車詢價'},
-                        {btnStyle:'dark', btnIcon:'fas fa-mobile-alt', btnLabel:'下載APP填單'},
+                    {btnStyle:'dark', btnIcon:'fas fa-shipping-fast', btnLabel:'快速估價'},
+                    {btnStyle:'dark', btnIcon:'fas fa-truck-loading', btnLabel:'回頭車估價'},
                     ])
                 </div>
             </div>

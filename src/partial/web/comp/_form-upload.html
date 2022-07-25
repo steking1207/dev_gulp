@@ -1,0 +1,26 @@
+<div class="form-group row mb-4">
+    <label for="inputUpload" class="col-sm-12 col-form-label">@@label</label>
+    <div class="col-sm-12">
+        <div class="alert alert-secondary text-center py-3">
+            <div class="mb-2">
+                <i class="fa-5x fa-fw fas fa-file-upload"></i>
+            </div>
+            <div class="mb-2">
+                <div>選擇或直接拖曳檔案到此上傳</div>
+                <div class="text-secondary"><small>最大可上傳 2MB 檔案，檔案格式僅限jpg</small></div>
+            </div>
+            <span class="btn btn-secondary">請選擇檔案</span>
+            <input class="file-input" type="file" multiple>
+        </div>
+        <div class="form-row form-upload-img">
+            @@for (var i = 0; i < group.item.length; i++) {
+                @@include('../unit/_form-upload-img.html', `+(JSON.stringify(group.item[i]))+`)
+            }
+            <!-- <div class="col-4 col-lg-2 mb-2 text-center">
+                <label class="btn btn-upload btn-outline-secondary">
+                    <i class="fas fa-2x fa-plus"></i> <input type="file" multiple="multiple" name="FileUpload1" id="FileUpload1" accept="image/*" onchange="showpreview(this);" hidden />
+                </label>
+            </div> -->
+        </div>
+    </div>
+</div>

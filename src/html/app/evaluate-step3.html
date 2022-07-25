@@ -12,6 +12,13 @@
                 <div class="col-12 px-0">
                     <div class="box">
                         <div class="bg-warning p-2">
+                            <div class="h5">退費方式</div>
+                            <ul class="pl-4">
+                                <li class="my-1">個人資訊僅供搬家公司報價聯絡使用</li>
+                                <li class="my-1">填單完成，登入會員即可得與搬家公司雙向溝通討論</li>
+                                <li class="my-1">線上填寫搬家估價單，享5%折扣退費</li>
+                            </ul>
+                            <div class="h5">退費方式</div>
                             <ol class="pl-4 m-0">
                                 <li class="mb-1">個人資訊僅供搬家公司報價聯絡使用。</li>
                                 <li class="mb-1">此系統僅限搬運日前一個月~前一週可使用。</li>
@@ -25,7 +32,7 @@
                     <div class="row align-items-center justify-content-center py-2">
                             <div class="col-12">
                                 <div class="py-3">
-                                    @@include('../../partial/app/unit/_section-title.html',{
+                                    @@include('../../partial/common/unit/_section-title.html',{
                                         title:'個人資訊',
                                     })
                                     <div class="form-group row mb-4">
@@ -80,7 +87,7 @@
                                 </div>
 
                                 <div class="py-3">
-                                    @@include('../../partial/app/unit/_section-title.html',{
+                                    @@include('../../partial/common/unit/_section-title.html',{
                                         title:'遷出資訊',
                                     })
                                     <div class="form-group row mb-4">
@@ -124,7 +131,7 @@
                                                 </div>
                                             </div>
                                     </div>
-                                    <div class="form-group row mb-4">
+                                    <!-- <div class="form-group row mb-4">
                                         <label for="inputOutDistance" class="col-12 col-form-label">步行距離</label>
                                         <div class="col-12">
                                             <div class="form-row">
@@ -145,11 +152,11 @@
                                         <div class="col-12">
                                             <input type="text" class="form-control" id="inputOutNote" value="" placeholder="例如山坡地等">
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
 
                                 <div class="py-3">
-                                    @@include('../../partial/app/unit/_section-title.html',{
+                                    @@include('../../partial/common/unit/_section-title.html',{
                                         title:'遷入資訊',
                                     })
                                     <div class="form-group row mb-4">
@@ -218,7 +225,7 @@
                                 </div>
 
                                 <div class="py-3">
-                                    @@include('../../partial/app/unit/_section-title.html',{
+                                    @@include('../../partial/common/unit/_section-title.html',{
                                         title:'其他詢價',
                                     })
                                     <div class="form-group row mb-4">
@@ -319,17 +326,15 @@
                                 </div>
                             </div>
                         <div class="col-12">
-                            @@include('../../partial/app/unit/_section-title.html',{
+                            @@include('../../partial/common/comp/_company-select.html',{
                                 title:'選擇搬家公司 (最多3家)',
-                            })
-                            @@include('../../partial/app/comp/_company-list.html',{
                                 id:'company',
                                 group: {
                                     item: [
-                                        {id:'1', imgUrl:'assets/img/uploads/company-sm-01.jpg', location:'台北', name:'誠品搬家公司', tel:'02-24302545',},
-                                        {id:'2', imgUrl:'assets/img/uploads/company-sm-02.jpg', location:'台北', name:'誠品搬家公司', tel:'02-24302545',},
-                                        {id:'3', imgUrl:'assets/img/uploads/company-sm-03.jpg', location:'桃園', name:'誠品搬家公司', tel:'02-24302545',},
-                                        {id:'4', imgUrl:'assets/img/uploads/company-sm-01.jpg', location:'新竹', name:'誠誠搬家公司', tel:'02-24302545',},
+                                        {col:'-6', id:'1', state:'審核中', imgUrl:'assets/img/uploads/company-sm-01.jpg', location:'台北', name:'誠品搬家公司', tel:'02-24302545',},
+                                        {col:'-6', id:'2', imgUrl:'assets/img/uploads/company-sm-02.jpg', location:'台北', name:'誠品搬家公司', tel:'02-24302545',},
+                                        {col:'-6', id:'3', imgUrl:'assets/img/uploads/company-sm-03.jpg', location:'桃園', name:'誠品搬家公司', tel:'02-24302545',},
+                                        {col:'-6', id:'4', imgUrl:'assets/img/uploads/company-sm-01.jpg', location:'新竹', name:'誠誠搬家公司', tel:'02-24302545',},
                                     ]
                                 },
                             })
